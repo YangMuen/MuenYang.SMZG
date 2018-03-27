@@ -1,0 +1,13 @@
+﻿@using MuenYang.SMZG.Web.Models;
+@{
+    ViewBag.Title = "Detail";
+    var AlbumInfo = (ViewBag.AlbumItemList == null) ? (new Album()) : (Album)ViewBag.AlbumItemList;
+}
+
+<h2>@AlbumInfo.Name</h2>
+<h3>@AlbumInfo.Introduce</h3>
+@foreach (var temp in AlbumInfo.ItemList)
+{
+    <p>@temp.title -- @temp.date</p>
+}
+

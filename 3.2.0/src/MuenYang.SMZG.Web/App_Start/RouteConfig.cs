@@ -21,7 +21,7 @@ namespace MuenYang.SMZG.Web
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "MuenYang.SMZG..Web.Controllers" }
+                namespaces: new[] { "MuenYang.SMZG.Web.Controllers" }
             );
         }
     }

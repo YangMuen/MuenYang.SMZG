@@ -419,6 +419,9 @@
     <Reference Include="TimeZoneConverter, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TimeZoneConverter.2.2.1\lib\net45\TimeZoneConverter.dll</HintPath>
     </Reference>
+    <Reference Include="WebApplication2">
+      <HintPath>..\packages\SwtyApp1.0.1\WebApplication2.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
     </Reference>
@@ -486,6 +489,21 @@
     <Content Include="Content\flags\famfamfam-flags.png" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\AGuiDeZhuRiXinXi.jpg" />
+    <Content Include="Content\images\mmexport1522049471884.jpg" />
+    <Content Include="Content\images\mmexport1522049515033 - 副本.jpg" />
+    <Content Include="Content\images\mmexport1522049536128 - 副本.jpg" />
+    <Content Include="Content\images\mmexport1522049536128.jpg" />
+    <Content Include="Content\images\mmexport1522049881993.jpg" />
+    <Content Include="Content\images\mmexport1522049891177.jpg" />
+    <Content Include="Content\images\mmexport1522049902637.jpg" />
+    <Content Include="Content\images\mmexport1522049913308.jpg" />
+    <Content Include="Content\images\mmexport1522051771220.jpg" />
+    <Content Include="Content\images\mmexport1522051816390.jpg" />
+    <Content Include="Content\images\mmexport1522051841997.jpg" />
+    <Content Include="Content\images\SanChuanPingShuJiangShengJing.jpg" />
+    <Content Include="Content\images\ShengJingMeiGe.jpg" />
+    <Content Include="Content\images\SMZG.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Swtychina.css" />
     <Content Include="Content\themes\base\accordion.css" />
@@ -2806,6 +2824,8 @@
     <Content Include="Abp\Framework\styles\abp.mixings.css.map" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
+    <Content Include="App_Data\SanChuanPingshu.json" />
+    <Content Include="App_Data\TestAlbum.json" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
@@ -3614,6 +3634,7 @@
     <Content Include="Scripts\sweetalert\sweet-alert.html" />
     <Content Include="Scripts\sweetalert\sweet-alert.js" />
     <Content Include="Scripts\sweetalert\sweet-alert.min.js" />
+    <Content Include="Scripts\swty\swtychina.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Views\Account\Login.css">
@@ -3783,6 +3804,9 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_HeaderSwtychina.cshtml" />
     <Content Include="Views\Shared\_LayoutSwtychian.cshtml" />
+    <Content Include="Views\Album\Detail.cshtml" />
+    <Content Include="Views\Album\SwtychinaAlbum.cshtml" />
+    <Content Include="Views\Album\SwtychinaTime.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3790,9 +3814,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\MuenYang.SMZG.Application\MuenYang.SMZG.Application.csproj">
       <Project>{edf5d964-4c0f-4f19-b674-58a38a5e5401}</Project>

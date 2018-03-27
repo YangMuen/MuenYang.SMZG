@@ -3,7 +3,7 @@ using Abp.Web.Mvc.Authorization;
 
 namespace MuenYang.SMZG.Web.Controllers
 {
-    [AbpMvcAuthorize]
+    //[AbpMvcAuthorize]
     public class HomeController : SMZGControllerBase
     {
         //public ActionResult Index()
