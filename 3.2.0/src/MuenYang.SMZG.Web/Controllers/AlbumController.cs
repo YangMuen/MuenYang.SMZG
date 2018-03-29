@@ -11,6 +11,8 @@ namespace MuenYang.SMZG.Web.Controllers
         // GET: Album
         public ActionResult Index()
         {
+            SetBrowserTypeViewBag();
+            SetNewItemList();
             return View();
         }
 

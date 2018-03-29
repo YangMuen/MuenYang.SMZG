@@ -1,0 +1,127 @@
+﻿@using MuenYang.SMZG.Web.Models
+@{
+    var newItemsList = (ViewBag.NewItemList == null) ? new List<ItemListItem>() : ViewBag.NewItemList;
+
+    var basePlayerUrl = "http://swtychina.com/gb/audiodoc";
+    //var basePlayerUrl = "http://mp3.swtychina.com";
+    var nCount = 1;
+    var SwtyItemStyle = new string[] { "row mccItembackground", "row mccItem" };
+}
+
+<div id="NewItems" class="container newItems-section">
+    <h1>@L("NewItems")</h1>
+    <p class="text-center lead">@L("NewItemsDetail")</p>
+    <div class="row">
+        <div class="col-sm-5"><strong>@L("NewItemsList")</strong></div>
+        @*<div class="col-sm-2 col-xs-6"><strong>节目时间</strong></div>*@
+        @*<div class="col-sm-1"><strong>收听</strong></div>
+            <div class="col-sm-1"><strong>下载</strong></div>*@
+    </div>
+    <div class="row"> <hr style="margin-bottom:5px;margin-top:2px;" /></div>
+    @foreach (var temp in newItemsList)
+    {
+        if (nCount > 10) { break; }
+        var Url = basePlayerUrl;
+        var year_month_day = temp.date.Split('-');
+        if (year_month_day.Length != 3)
+        {
+            Url = basePlayerUrl + "2018/201801/20180101.mp3";
+        }
+        else
+        {
+            var year = year_month_day[0];
+            var month = year + year_month_day[1];
+            var day = month + year_month_day[2];
+            Url = basePlayerUrl + "/" + year + "/" + month + "/" + day + ".mp3";
+        }
+
+        <div class="@SwtyItemStyle[(nCount%2)] songlist__item">
+            
+            @if(ViewBag.IsMobileBrowser != null & !ViewBag.IsMobileBrowser)
+            {
+                <div class="col-sm-5" style="line-height:2.5">@temp.title (@temp.date)</div>
+                <div class="col-sm-1" onclick="playMe(this);" playurl=@Url id=@nCount data-container="body" data-toggle="popover" data-placement="top" 
+			    data-content=@L("ItemPlay")>
+                    <a href="javascript:void(0)" class="list_menu__item list_menu__play">
+                        <i class="list_menu__icon_play"></i>
+                    </a>
+                </div>
+                <div class="col-sm-1" id="download-div"  data-container="body" data-toggle="popover" data-placement="top" 
+			    data-content=@L("ItemDownload") >
+                    <a href="@Url" class="list_menu__item list_menu__down" target="_blank">
+                        <i class="list_menu__icon_down"></i>
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="col-sm-5"  onclick="playMe(this);" playurl=@Url id=@nCount>@temp.title (@temp.date)</div>
+            }
+            
+        </div>
+        nCount++;
+    }
+</div>
+<hr class="featurette-divider">
+
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h2>Heading</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+</div><!-- /.container -->

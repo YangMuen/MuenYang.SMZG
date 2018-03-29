@@ -17,7 +17,7 @@
 
     function getSwtyItemsData(valuesDate){
         //var server = 'http://api.swtychina.com/api/values?';
-        var server = 'http://ceshnjd.imwork.net:41689//api/values?';
+        var server = 'http://ceshnjd.imwork.net:41689/api/values?';
         // 删除原有节目
         deleteProgramList("ProgramList");
         toggleLoadingControls(true);
@@ -126,6 +126,7 @@
         child_div_player.setAttribute("class","col-sm-1 col-xs-3");
         child_div_player.setAttribute("onclick","playMe(this);");
         child_div_player.setAttribute("playurl",data.url);
+        child_div_player.setAttribute("id", "playItem");
         parent_div.appendChild(child_div_player);
 
         var child_div_player_a = document.createElement("a");
@@ -210,7 +211,7 @@
         loadLatestItem();        
 
         $("a[id='otheryear']").click(function () { 
-            
+            console.log("a[id='otheryear']");
             var year = $(this).text();
             var yearuse = year.substring(0, 4);
 
@@ -223,4 +224,15 @@
             $("#itemsNavigationYear").text(year);
             updateYearNavigation(Number(yearuse)*100);
         });
+
+
+        $("#ProgramList").click(function () {
+            console.log("#playItem:click()");
+            $("#swtyChinaPlayer").attr("class", "navbar navbar-default navbar-fixed-bottom mccPlayerbackground");
+        });
+
+        //$("#playItem").click(function () {
+        //    console.log(".mccDownloadImg:click()");
+        //    $("#swtyChinaPlayer").attr("class", "navbar navbar-default navbar-fixed-bottom mccPlayerbackground");            
+        //});
     });

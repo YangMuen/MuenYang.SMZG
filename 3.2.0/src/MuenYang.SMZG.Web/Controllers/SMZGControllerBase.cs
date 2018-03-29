@@ -5,9 +5,11 @@ using Microsoft.AspNet.Identity;
 using MuenYang.SMZG.Web.Models;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
+using HtmlAgilityPack;
 
 namespace MuenYang.SMZG.Web.Controllers
 {
@@ -16,6 +18,7 @@ namespace MuenYang.SMZG.Web.Controllers
     /// </summary>
     public abstract class SMZGControllerBase : AbpController
     {
+        static string _NewItemsUrl = "http://swtychina.com/gb/portal/new.aspx?";
         protected SMZGControllerBase()
         {
             LocalizationSourceName = SMZGConsts.LocalizationSourceName;
@@ -84,5 +87,53 @@ namespace MuenYang.SMZG.Web.Controllers
 
             ViewBag.AlbumItemList = albumItemList;
         }
+
+        // ItemListItem
+        protected List<ItemListItem> GetNewItemList()
+        {
+            return GetItems(_NewItemsUrl);
+             
+        }
+
+        protected void SetNewItemList()
+        {
+            var albumItemList = GetNewItemList();
+
+            ViewBag.NewItemList = albumItemList;
+        }
+
+        static List<ItemListItem> GetItems(string url)
+        {
+            List<ItemListItem> items = new List<ItemListItem>();
+            
+            HtmlWeb web = new HtmlWeb();
+            HtmlAgilityPack.HtmlDocument doc = web.Load(url);
+            HtmlNode table = doc.GetElementbyId("GridView2");
+            if (null != table)
+            {
+                int th_index = 0;
+                foreach (HtmlNode th in table.ChildNodes)
+                {
+                    if (th_index++ > 1)
+                    {
+                        int index = 0;
+                        ItemListItem item = new ItemListItem();
+                        //string date = "", title = "";
+                        foreach (HtmlNode tr in th.ChildNodes)
+                        {
+                            if (index++ == 1)
+                                item.date = tr.InnerText;
+                            if (index == 6)
+                                item.title = tr.InnerText;
+                        }
+                        if (item.date != "" && item.title != "")
+                            items.Add(item);
+                    }
+                }
+            }
+            return items;
+        }
+
     }
+    
 }

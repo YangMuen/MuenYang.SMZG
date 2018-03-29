@@ -122,6 +122,9 @@
     <Reference Include="Hangfire.SqlServer, Version=1.6.17.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Hangfire.SqlServer.1.6.17\lib\net45\Hangfire.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
       <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
@@ -501,6 +504,10 @@
     <Content Include="Content\images\mmexport1522051771220.jpg" />
     <Content Include="Content\images\mmexport1522051816390.jpg" />
     <Content Include="Content\images\mmexport1522051841997.jpg" />
+    <Content Include="Content\images\player\icon_list_menu%402x.png" />
+    <Content Include="Content\images\player\icon_list_menu.png" />
+    <Content Include="Content\images\player\icon_sprite%402x.png" />
+    <Content Include="Content\images\player\icon_sprite.png" />
     <Content Include="Content\images\SanChuanPingShuJiangShengJing.jpg" />
     <Content Include="Content\images\ShengJingMeiGe.jpg" />
     <Content Include="Content\images\SMZG.jpg" />
@@ -3634,6 +3641,7 @@
     <Content Include="Scripts\sweetalert\sweet-alert.html" />
     <Content Include="Scripts\sweetalert\sweet-alert.js" />
     <Content Include="Scripts\sweetalert\sweet-alert.min.js" />
+    <Content Include="Scripts\swty\newItems.js" />
     <Content Include="Scripts\swty\swtychina.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
@@ -3807,6 +3815,8 @@
     <Content Include="Views\Album\Detail.cshtml" />
     <Content Include="Views\Album\SwtychinaAlbum.cshtml" />
     <Content Include="Views\Album\SwtychinaTime.cshtml" />
+    <Content Include="Views\Album\_NewItems.cshtml" />
+    <Content Include="Views\Album\_Player.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

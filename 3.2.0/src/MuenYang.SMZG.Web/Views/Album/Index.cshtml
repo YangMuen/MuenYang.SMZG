@@ -2,5 +2,12 @@
     ViewBag.Title = "山外天园";
     Layout = "~/Views/Shared/_LayoutSwtychian.cshtml";
 }
+@section Scripts{
+    <script src="~/Scripts/swty/newItems.js"></script>
+}
 
 @Html.Partial("~/Views/Album/_Slider.cshtml")
+
+@Html.Partial("~/Views/Album/_NewItems.cshtml")
+
+@Html.Partial("~/Views/Album/_Player.cshtml")

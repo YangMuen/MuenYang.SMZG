@@ -50,6 +50,7 @@
 
 .mccItembackground {
     background-color: #f6f4ff;
+    /*background-color: #6EB9FE;*/
     padding: 5px 0px;
     border-radius: 3px;
     /*margin-right: 1px;*/
@@ -203,3 +204,96 @@
         -webkit-transform: scale(1.0);
     }
 }
+
+/* QQ Music Player button begin*/
+.songlist__item .list_menu__icon_play{
+    background-position: 40px 0;
+}
+.songlist__item .list_menu__icon_down {
+    background-position: 40px 0;
+}
+.songlist__item:hover .list_menu__icon_play {
+    background-position: 0px 0;
+}
+.songlist__item:hover .list_menu__icon_down {
+    background-position: 0px -120px;
+}
+.list_menu__item {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.list_menu__icon_add, .list_menu__icon_delete, .list_menu__icon_down, .list_menu__icon_edit, .list_menu__icon_pause, .list_menu__icon_play, .list_menu__icon_share {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url(images/player/icon_list_menu.png);
+    /*background-image: -webkit-image-set(url(images/player/icon_list_menu.png?max_age=2592000&v=4566a1a62ecad72fe9b9205d1ad62d2b) 1x,url(~/Content/images/player/icon_list_menu@2x.png?max_age=2592000&v=4566a1a62ecad72fe9b9205d1ad62d2b&v=155713ca49dc652a6ada08b0492f088a) 2x);*/
+    background-repeat: no-repeat
+}
+
+.list_menu__icon_play {
+    background-position: 0 0
+}
+
+.list_menu__icon_pause {
+    background-position: 0 -200px
+}
+
+.list_menu__icon_share {
+    background-position: 0 -40px
+}
+
+.list_menu__icon_add {
+    background-position: 0 -80px
+}
+
+.list_menu__icon_down {
+    background-position: 0 -120px
+}
+
+.list_menu__icon_edit {
+    background-position: 0 -240px
+}
+
+.list_menu__icon_delete {
+    background-position: 0 -160px
+}
+
+@media (max-width:1240px) {
+    .list_menu__item {
+        margin-right: 5px
+    }
+}
+
+.list_menu__item:hover .list_menu__icon_play {
+    background-position: -40px 0
+}
+
+.list_menu__item:hover .list_menu__icon_pause {
+    background-position: -40px -200px
+}
+
+.list_menu__item:hover .list_menu__icon_share {
+    background-position: -40px -40px
+}
+
+.list_menu__item:hover .list_menu__icon_add {
+    background-position: -40px -80px
+}
+
+.list_menu__item:hover .list_menu__icon_down {
+    background-position: -40px -120px
+}
+
+.list_menu__item:hover .list_menu__icon_edit {
+    background-position: -40px -240px
+}
+
+.list_menu__item:hover .list_menu__icon_delete {
+    background-position: -40px -160px
+}
+
+
+/* QQ Music Player button end*/
