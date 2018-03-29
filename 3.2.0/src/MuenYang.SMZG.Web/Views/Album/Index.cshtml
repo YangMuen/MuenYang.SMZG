@@ -2,8 +2,13 @@
     ViewBag.Title = "山外天园";
     Layout = "~/Views/Shared/_LayoutSwtychian.cshtml";
 }
+@section Styles
+{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+}
 @section Scripts{
     <script src="~/Scripts/swty/newItems.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
 }
 
 @Html.Partial("~/Views/Album/_Slider.cshtml")

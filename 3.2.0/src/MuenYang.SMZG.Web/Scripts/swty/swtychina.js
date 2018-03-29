@@ -231,8 +231,5 @@
             $("#swtyChinaPlayer").attr("class", "navbar navbar-default navbar-fixed-bottom mccPlayerbackground");
         });
 
-        //$("#playItem").click(function () {
-        //    console.log(".mccDownloadImg:click()");
-        //    $("#swtyChinaPlayer").attr("class", "navbar navbar-default navbar-fixed-bottom mccPlayerbackground");            
-        //});
+        
     });
