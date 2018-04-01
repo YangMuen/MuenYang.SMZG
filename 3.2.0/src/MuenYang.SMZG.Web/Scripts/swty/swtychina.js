@@ -17,7 +17,7 @@
 
     function getSwtyItemsData(valuesDate){
         //var server = 'http://api.swtychina.com/api/values?';
-        var server = 'http://ceshnjd.imwork.net:41689/api/values?';
+        var server = 'http://localhost:61698/api/values?';
         // 删除原有节目
         deleteProgramList("ProgramList");
         toggleLoadingControls(true);

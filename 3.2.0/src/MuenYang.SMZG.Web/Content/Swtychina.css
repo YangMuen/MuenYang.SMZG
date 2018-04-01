@@ -72,6 +72,9 @@
     font-size:16px;
     /*vertical-align:bottom;*/
 }
+.moreitems {
+    float: right;
+}
 
 .spinner {
     margin: 100px auto;
@@ -296,7 +299,7 @@
 }
 /* QQ Music Player button end*/
 
-.swiper-container {
+/*.swiper-container {
     width: 100%;
     height: 100%;
 }
@@ -318,4 +321,4 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-}
+}*/

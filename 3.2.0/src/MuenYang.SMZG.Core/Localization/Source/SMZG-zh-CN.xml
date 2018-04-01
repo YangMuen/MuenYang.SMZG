@@ -58,10 +58,45 @@
     
     <!-- SwtyChina index-->
     <text name="NewItems" value="节目快递" />
-    <text name="NewItemsDetail" value="山外天园最新的20期节目" />
+    <text name="NewItemsDetail" value="山外天园最新的10期节目" />
     <text name="NewItemsList" value="节目列表"/>
     <text name="ItemPlay" value="播放"/>
     <text name="ItemDownload" value="右键另存为下载"/>
+    <text name="MoreItems" value="查看更多"/>
+
+    <!--Album Name-->
+    <!--<text name="SliderAlbum1" value="JiaoHuiYunZuo.json"/>
+    <text name="SliderAlbum2" value="JiaLaTaiShu.json"/>
+    <text name="SliderAlbum3" value="LuJiaFuYin.json"/>
+    <text name="SliderAlbum4" value="SiFuYinBuHeBian.json"/>
+    <text name="SliderAlbum5" value="ShengJingYinYueHui.json"/>
+    <text name="SliderAlbum6" value="XiShuoChuanDaoshu.json"/>
+    <text name="SliderAlbum7" value="YueHanFuYin.json"/>-->
+    <text name="SliderAlbum1" value="JiaoHuiYunZuo"/>
+    <text name="SliderAlbum2" value="JiaLaTaiShu"/>
+    <text name="SliderAlbum3" value="LuJiaFuYin"/>
+    <text name="SliderAlbum4" value="SiFuYinBuHeBian"/>
+    <text name="SliderAlbum5" value="ShengJingYinYueHui"/>
+    <text name="SliderAlbum6" value="XiShuoChuanDaoshu"/>
+    <text name="SliderAlbum7" value="YueHanFuYin"/>
+
+    <text name="SliderAlbumName1" value="教会运作七十问"/>
+    <text name="SliderAlbumName2" value="加拉太书查经：蒙哥 东明 路加"/>
+    <text name="SliderAlbumName3" value="路加福音： 蒙哥 路加"/>
+    <text name="SliderAlbumName4" value="四福音不合编：蒙哥 小卫"/>
+    <text name="SliderAlbumName5" value="圣经音乐会：蒙哥"/>
+    <text name="SliderAlbumName6" value="细说传道书：蒙哥 骆驼"/>
+    <text name="SliderAlbumName7" value="约翰福音：蒙哥 阿桂"/>
+
+    <!-- Slider Name -->
+    <text name="SliderPic1" value="JiaoHuiYunZuo.jpg"/>
+    <text name="SliderPic2" value="JiaLaTaiShu.jpg"/>
+    <text name="SliderPic3" value="LuJiaFuYin.jpg"/>
+    <text name="SliderPic4" value="SiFuYinBuHeBian.jpg"/>
+    <text name="SliderPic5" value="ShengJingYinYueHui.jpg"/>
+    <text name="SliderPic6" value="XiShuoChuanDaoshu.jpg"/>
+    <text name="SliderPic7" value="YueHanFuYin.jpg"/>
+
 
   </texts>
 </localizationDictionary>

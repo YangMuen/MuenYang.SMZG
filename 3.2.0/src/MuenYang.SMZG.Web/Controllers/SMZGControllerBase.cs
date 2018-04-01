@@ -75,7 +75,7 @@ namespace MuenYang.SMZG.Web.Controllers
         protected Album GetAlbumItemList(string albumName)
         {
             // "~/App_Data/TestAlbum.json"
-            string filepath = Server.MapPath("~/App_Data/" + albumName);
+            string filepath = Server.MapPath("~/App_Data/" + albumName + ".json");
             string json = GetFileJson(filepath);
 
             return (Album)JsonConvert.DeserializeObject(json, typeof(Album));
