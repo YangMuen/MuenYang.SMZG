@@ -8,19 +8,23 @@ namespace MuenYang.SMZG.Web.Models
     public class Album
     {
         /// <summary>
-        /// 2017年1月节目
+        /// 专辑名
         /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// 这是2017年1月份的节目，测试使用
+        /// 专辑介绍
         /// </summary>
         public string Introduce { get; set; }
         /// <summary>
-        /// 
+        /// 主持人
+        /// </summary>
+        public string Compere { get; set; }
+        /// <summary>
+        /// 图片
         /// </summary>
         public string Picture { get; set; }
         /// <summary>
-        /// 
+        /// 节目列表
         /// </summary>
         public List<ItemListItem> ItemList { get; set; }
     }
@@ -28,11 +32,11 @@ namespace MuenYang.SMZG.Web.Models
     public class ItemListItem
     {
         /// <summary>
-        /// 2017-01-02[文]
+        /// 节目时间 2017-01-10
         /// </summary>
         public string date { get; set; }
         /// <summary>
-        /// 山外天园特约稿：以色列的小使女(001)转机记
+        /// 节目名称 
         /// </summary>
         public string title { get; set; }
     }

@@ -2,12 +2,93 @@
 @{
     ViewBag.Title = "Detail";
     var AlbumInfo = (ViewBag.AlbumItemList == null) ? (new Album()) : (Album)ViewBag.AlbumItemList;
-}
 
-<h2>@AlbumInfo.Name</h2>
-<h3>@AlbumInfo.Introduce</h3>
-@foreach (var temp in AlbumInfo.ItemList)
-{
-    <p>@temp.title -- @temp.date</p>
+    var basePlayerUrl = "http://swtychina.com/gb/audiodoc";
+    //var basePlayerUrl = "http://mp3.swtychina.com";
+    var nCount = 1;
+    var SwtyItemStyle = new string[] { "row mccItembackground", "row mccItem" };
 }
+@section Styles
+{
+    <link rel="stylesheet" href="~/Content/Swtychina.css">
+}
+@section Scripts{
+    <script src="~/Scripts/swty/newItems.js"></script>
+}
+<div class="albun-detail-section">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-7">
+                    <img src="~/Content/images/Album/@AlbumInfo.Picture" alt=@AlbumInfo.Picture width="380" height="225" />
+                </div>
+                <div class="col-md-4 album-info">
+                    <h2>@AlbumInfo.Name</h2>
+                    <p><strong>主持人：</strong>@AlbumInfo.Compere</p>
+                    <p><strong>节目数：</strong>@AlbumInfo.ItemList.Count</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="album-list">
+
+    </div>
+    <div class="row ">
+        @*<div class="col-sm-8"><div class="fl"></div></div>*@
+        <div class="col-md-8">
+            <div class="row mccItembackground songlist__item" style="line-height:2.5">
+                <div class="col-md-12"><strong>@L("NewItemsList")</strong></div>
+            </div>
+            @foreach (var temp in AlbumInfo.ItemList)
+            {
+                
+                var Url = basePlayerUrl;
+                var year_month_day = temp.date.Split('-');
+                if (year_month_day.Length != 3)
+                {
+                    Url = basePlayerUrl + "2018/201801/20180101.mp3";
+                }
+                else
+                {
+                    var year = year_month_day[0];
+                    var month = year + year_month_day[1];
+                    var day = month + year_month_day[2];
+                    Url = basePlayerUrl + "/" + year + "/" + month + "/" + day + ".mp3";
+                }
+
+                <div class="@SwtyItemStyle[(nCount%2)] songlist__item">
+
+                    @if (ViewBag.IsMobileBrowser != null & !ViewBag.IsMobileBrowser)
+                    {
+                        <div class="col-md-9" style="line-height:2.5">@temp.title (@temp.date)</div>
+                        <div class="col-md-1" onclick="playMe(this);" playurl=@Url id=@nCount>
+                            <a href="javascript:void(0)" class="list_menu__item list_menu__play">
+                                <i class="list_menu__icon_play"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-1" id="download-div">
+                            <a href="@Url" class="list_menu__item list_menu__down" target="_blank">
+                                <i class="list_menu__icon_down"></i>
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-5" onclick="playMe(this);" playurl=@Url id=@nCount>@temp.title (@temp.date)</div>
+                    }
+
+                </div>
+                nCount++;
+            }
+
+        </div>
+        <div class="col-md-4">
+            <h2>简介</h2>
+            <p>@AlbumInfo.Introduce</p>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("~/Views/Album/_Player.cshtml")
+
 

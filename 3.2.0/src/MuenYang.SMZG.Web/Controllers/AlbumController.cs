@@ -18,6 +18,7 @@ namespace MuenYang.SMZG.Web.Controllers
 
         public ActionResult Detail(string albumName)
         {
+            SetBrowserTypeViewBag();
             SetAlbumItemList(albumName);
             return View();
         }
@@ -38,11 +39,13 @@ namespace MuenYang.SMZG.Web.Controllers
 
         public ActionResult SwtychinaTime()
         {
+            SetBrowserTypeViewBag();
             return View();
         }
 
         public ActionResult SwtychinaAlbum()
         {
+            SetBrowserTypeViewBag();
             return View();
         }
     }

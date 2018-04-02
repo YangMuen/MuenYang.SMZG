@@ -309,7 +309,7 @@
     font-size: 18px;
     background: #fff;
     /* Center slide text vertically */
-    display: -webkit-box;
+/*display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -322,3 +322,16 @@
     -webkit-align-items: center;
     align-items: center;
 }*/
+
+.albun-detail-section{
+     padding: 40px 0 35px;
+ }
+.albun-detail-section h2{
+    margin-top:0;
+}
+.album-info {
+    padding-top: 25px;
+}
+.album-list {
+    padding-top: 35px;
+}
