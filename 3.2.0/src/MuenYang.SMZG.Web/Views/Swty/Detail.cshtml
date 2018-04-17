@@ -1,7 +1,7 @@
 ﻿@using MuenYang.SMZG.Web.Models;
 @{
     ViewBag.Title = "Detail";
-    var AlbumInfo = (ViewBag.AlbumItemList == null) ? (new Album()) : (Album)ViewBag.AlbumItemList;
+    var AlbumInfo = (ViewBag.AlbumItemList == null) ? (new Swty()) : (Swty)ViewBag.AlbumItemList;
 
     var basePlayerUrl = "http://swtychina.com/gb/audiodoc";
     //var basePlayerUrl = "http://mp3.swtychina.com";
@@ -89,6 +89,6 @@
     </div>
 </div>
 
-@Html.Partial("~/Views/Album/_Player.cshtml")
+@Html.Partial("~/Views/Swty/_Player.cshtml")
 
 

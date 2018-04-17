@@ -493,6 +493,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\images\Album\2007回顾.jpg" />
+    <Content Include="Content\images\Album\Agui.jpg" />
     <Content Include="Content\images\Album\JiaLaTaiShu.jpg" />
     <Content Include="Content\images\Album\JiangTaiChaJing.png" />
     <Content Include="Content\images\Album\JiaoHuiYunZuo.jpg" />
@@ -500,6 +501,7 @@
     <Content Include="Content\images\Album\LuJiaFuYin.jpg" />
     <Content Include="Content\images\Album\LuoMaShu.jpg" />
     <Content Include="Content\images\Album\MaTaiFuYin.jpg" />
+    <Content Include="Content\images\Album\PuRenZhiLu.jpg" />
     <Content Include="Content\images\Album\ShengJingYinYueHui.jpg" />
     <Content Include="Content\images\Album\ShiTuXingZhuan.png" />
     <Content Include="Content\images\Album\SiFuYinBuHeBian.jpg" />
@@ -508,8 +510,6 @@
     <Content Include="Content\images\Album\YueHanFuYin.jpg" />
     <Content Include="Content\images\player\icon_list_menu%402x.png" />
     <Content Include="Content\images\player\icon_list_menu.png" />
-    <Content Include="Content\images\player\icon_sprite%402x.png" />
-    <Content Include="Content\images\player\icon_sprite.png" />
     <Content Include="Content\images\slider\wm_button_icon.png" />
     <Content Include="Content\images\SMZG.jpg" />
     <Content Include="Content\Site.css" />
@@ -2879,6 +2879,7 @@
     <Content Include="fonts\material-icons\materialicons.eot" />
     <Content Include="fonts\material-icons\materialicons.ttf" />
     <Content Include="fonts\material-icons\materialicons.woff" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -3681,7 +3682,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AlbumController.cs" />
+    <Compile Include="Controllers\SWTYController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SMZGControllerBase.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
@@ -3696,7 +3697,7 @@
     <Compile Include="Models\Account\TenantChangeModalViewModel.cs" />
     <Compile Include="Models\Account\TenantChangeViewModel.cs" />
     <Compile Include="Models\Account\TenantSelectionViewModel.cs" />
-    <Compile Include="Models\Album.cs" />
+    <Compile Include="Models\Swty.cs" />
     <Compile Include="Models\Common\Modals\ModalHeaderViewModel.cs" />
     <Compile Include="Models\LanguageSelectionViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -3814,17 +3815,17 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Album\Index.cshtml" />
-    <Content Include="Views\Album\_Slider.cshtml" />
+    <Content Include="Views\Swty\Index.cshtml" />
+    <Content Include="Views\Swty\_Slider.cshtml" />
     <Content Include="Views\Shared\_footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_HeaderSwtychina.cshtml" />
     <Content Include="Views\Shared\_LayoutSwtychian.cshtml" />
-    <Content Include="Views\Album\Detail.cshtml" />
-    <Content Include="Views\Album\SwtychinaAlbum.cshtml" />
-    <Content Include="Views\Album\SwtychinaTime.cshtml" />
-    <Content Include="Views\Album\_NewItems.cshtml" />
-    <Content Include="Views\Album\_Player.cshtml" />
+    <Content Include="Views\Swty\Detail.cshtml" />
+    <Content Include="Views\Swty\SwtychinaAlbum.cshtml" />
+    <Content Include="Views\Swty\SwtychinaTime.cshtml" />
+    <Content Include="Views\Swty\_NewItems.cshtml" />
+    <Content Include="Views\Swty\_Player.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

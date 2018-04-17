@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MuenYang.SMZG.Web.Controllers
 {
-    public class AlbumController : SMZGControllerBase
+    public class SWTYController : SMZGControllerBase
     {
         // GET: Album
         public ActionResult Index()

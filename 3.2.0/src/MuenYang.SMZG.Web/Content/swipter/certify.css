@@ -2,13 +2,13 @@
 /* CSS Document */
 
 #certify {
-	position: relative;
-	width: 1200px;
-	margin: 0 auto;    
+    position: relative;
+    background-color: #F5F5F5;
+    margin: 0 auto;
 }
 
 #certify .swiper-container {
-	padding-bottom: 60px;
+    padding-bottom: 60px;
 }
 
 #certify  .swiper-slide {
@@ -49,7 +49,7 @@
 }
 
     #certify .swiper-button-prev {
-        left: -30px;
+        /*left: -30px;*/
         width: 45px;
         height: 45px;
         background: url(../images/slider/wm_button_icon.png) no-repeat;
@@ -63,7 +63,7 @@
 }
 
 #certify .swiper-button-next {
-	right: -30px;
+	/*right: -30px;*/
 	width: 45px;
 	height: 45px;
 	background: url(../images/slider/wm_button_icon.png) no-repeat;

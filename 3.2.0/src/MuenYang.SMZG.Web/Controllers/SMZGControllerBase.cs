@@ -72,13 +72,13 @@ namespace MuenYang.SMZG.Web.Controllers
             return json;
         }
 
-        protected Album GetAlbumItemList(string albumName)
+        protected Swty GetAlbumItemList(string albumName)
         {
             // "~/App_Data/TestAlbum.json"
             string filepath = Server.MapPath("~/App_Data/" + albumName + ".json");
             string json = GetFileJson(filepath);
 
-            return (Album)JsonConvert.DeserializeObject(json, typeof(Album));
+            return (Swty)JsonConvert.DeserializeObject(json, typeof(Swty));
         }
 
         protected void SetAlbumItemList(string albumName)

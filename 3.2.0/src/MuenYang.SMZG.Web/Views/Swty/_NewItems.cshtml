@@ -1,0 +1,105 @@
+﻿@using MuenYang.SMZG.Web.Models
+@{
+    var newItemsList = (ViewBag.NewItemList == null) ? new List<ItemListItem>() : ViewBag.NewItemList;
+
+    var basePlayerUrl = "http://swtychina.com/gb/audiodoc";
+    //var basePlayerUrl = "http://mp3.swtychina.com";
+    var nCount = 1;
+    var SwtyItemStyle = new string[] { "row mccItembackground", "row mccItem" };
+}
+
+<div class="newItems-section">
+    <div id="NewItems" class="container">
+        <h1>@L("NewItems")</h1>
+        <p class="text-center lead">@L("NewItemsDetail")</p>
+        <div class="row">
+            <div class="col-sm-10"><div class="fl"><strong>@L("NewItemsList")</strong></div></div>
+            <div class="col-sm-2">
+                <div class="fr">
+                    @Html.ActionLink(L("MoreItems") + ">", "SwtychinaTime", null, new { target = "_blank" })
+                </div>
+            </div>
+
+            @*<div class="col-sm-2 col-xs-6"><strong>节目时间</strong></div>
+                <div class="col-sm-1"><strong>收听</strong></div>
+                <div class="col-sm-1"><strong>下载</strong></div>*@
+        </div>
+        <div class="row"> <hr style="margin-bottom:5px;margin-top:2px;" /></div>
+        @foreach (var temp in newItemsList)
+        {
+            if (nCount > 10) { break; }
+            var Url = basePlayerUrl;
+            var year_month_day = temp.date.Split('-');
+            if (year_month_day.Length != 3)
+            {
+                Url = basePlayerUrl + "2018/201801/20180101.mp3";
+            }
+            else
+            {
+                var year = year_month_day[0];
+                var month = year + year_month_day[1];
+                var day = month + year_month_day[2];
+                Url = basePlayerUrl + "/" + year + "/" + month + "/" + day + ".mp3";
+            }
+
+            <div class="@SwtyItemStyle[(nCount%2)] songlist__item">
+
+                @if (ViewBag.IsMobileBrowser != null & !ViewBag.IsMobileBrowser)
+                {
+                    <div class="col-sm-5" style="line-height:2.5">@temp.title (@temp.date)</div>
+                    <div class="col-sm-1" onclick="playMe(this);" playurl=@Url id=@nCount @*data-container="body" data-toggle="popover" data-placement="top" data-content=@L("ItemPlay")*@>
+                        <a href="javascript:void(0)" class="list_menu__item list_menu__play">
+                            <i class="list_menu__icon_play"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-1" id="download-div" @*data-container="body" data-toggle="popover" data-placement="top"
+			    data-content=@L("ItemDownload")*@>
+                        <a href="@Url" class="list_menu__item list_menu__down" target="_blank">
+                            <i class="list_menu__icon_down"></i>
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-sm-5" onclick="playMe(this);" playurl=@Url id=@nCount>@temp.title (@temp.date)</div>
+                }
+
+            </div>
+            nCount++;
+        }
+    </div>
+</div>
+
+<div class="album-index-section">
+    <div class="container marketing ">
+        <h1 >@L("AlbumRecommend")</h1>
+        <p class="text-center lead">@L("AlbumRecommendDetail")</p>
+        <!-- Three columns of text below the carousel -->
+        <div class="row" style="padding-bottom:50px;">
+            <div class="col-lg-4">
+                <a href="~/Swty/Detail?albumName=@L("SliderAlbum8")"><img class="img-rounded" src="~/Content/images/Album/@L("SliderPic8")" width="80%" height="80%" /></a>
+                <h2>阿桂主日信息</h2>
+                <p>@L("SliderAlbumName8")</p>
+                @*<p><a class="btn btn-primary" href="~/Swty/Detail?albumName=@L("SliderAlbum8")" role="button">View details &raquo;</a></p>*@
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <a href="~/Swty/Detail?albumName=@L("SliderAlbum9")"><img class="img-rounded" src="~/Content/images/Album/@L("SliderPic9")" width="80%" height="80%" /></a>
+                <h2>仆人之路</h2>
+                <p>@L("SliderAlbumName9")</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <a href="~/Swty/Detail?albumName=@L("SliderAlbum10")"><img class="img-rounded" src="~/Content/images/Album/@L("SliderPic10")" width="80%" height="80%" /></a>
+                <h2>圣言小学三二一</h2>
+                <p>@L("SliderAlbumName10")</p>
+            </div><!-- /.col-lg-4 -->
+            <p class="fr"><a class="btn btn-primary" href="~/Swty/SwtychinaAlbum" role="button">@L("MoreItems") &raquo;</a></p>
+        </div><!-- /.row -->
+        <!-- START THE FEATURETTES -->
+    </div><!-- /.container -->
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2018 生命之光. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>

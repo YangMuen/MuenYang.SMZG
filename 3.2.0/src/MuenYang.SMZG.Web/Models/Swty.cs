@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MuenYang.SMZG.Web.Models
 {
-    public class Album
+    public class Swty
     {
         /// <summary>
         /// 专辑名

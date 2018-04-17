@@ -63,6 +63,8 @@
     <text name="ItemPlay" value="播放"/>
     <text name="ItemDownload" value="右键另存为下载"/>
     <text name="MoreItems" value="查看更多"/>
+    <text name="AlbumRecommend" value="精彩推荐"/>
+    <text name="AlbumRecommendDetail" value="园子节目打包更新中..."/>
 
     <!--Album Name-->
     <!--<text name="SliderAlbum1" value="JiaoHuiYunZuo.json"/>
@@ -79,6 +81,11 @@
     <text name="SliderAlbum5" value="ShengJingYinYueHui"/>
     <text name="SliderAlbum6" value="XiShuoChuanDaoshu"/>
     <text name="SliderAlbum7" value="YueHanFuYin"/>
+    <text name="SliderAlbum8" value="Agui"/>
+    <text name="SliderAlbum9" value="PuRenZhiLu"/>
+    <text name="SliderAlbum10" value="ShengYangXiaoXue321"/>
+    
+
 
     <text name="SliderAlbumName1" value="教会运作七十问"/>
     <text name="SliderAlbumName2" value="加拉太书查经：蒙哥 东明 路加"/>
@@ -87,6 +94,9 @@
     <text name="SliderAlbumName5" value="圣经音乐会：蒙哥"/>
     <text name="SliderAlbumName6" value="细说传道书：蒙哥 骆驼"/>
     <text name="SliderAlbumName7" value="约翰福音：蒙哥 阿桂"/>
+    <text name="SliderAlbumName8" value="阿桂主日信息 这是阿桂在所服事教会的主日信息"/>
+    <text name="SliderAlbumName9" value="仆人之路 给传道的无名人"/>
+    <text name="SliderAlbumName10" value="这是蒙哥与满福教会查经的实录"/>
 
     <!-- Slider Name -->
     <text name="SliderPic1" value="JiaoHuiYunZuo.jpg"/>
@@ -96,6 +106,11 @@
     <text name="SliderPic5" value="ShengJingYinYueHui.jpg"/>
     <text name="SliderPic6" value="XiShuoChuanDaoshu.jpg"/>
     <text name="SliderPic7" value="YueHanFuYin.jpg"/>
+
+    <text name="SliderPic8" value="Agui.jpg"/>
+    <text name="SliderPic9" value="PuRenZhiLu.jpg"/>
+    <text name="SliderPic10" value="ShengYangXiaoXue321.jpg"/>
+
 
 
   </texts>
