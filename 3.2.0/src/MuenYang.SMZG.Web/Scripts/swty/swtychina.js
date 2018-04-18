@@ -6,6 +6,7 @@
     var arrmonth = ["1","2","3","4","5","6","7","8","9","10","11","12"];
     //var isLoadLatestItem = false;
 
+    // 控制播放器的显示与隐藏
     function toggleLoadingControls(loading) {
         if (loading) {
             document.querySelector('.spinner').setAttribute('class', "spinner");            
@@ -27,7 +28,7 @@
             dataType: 'json',
             timeout: 10000,
             error: function(data){
-                alert('不要着急我正在加载~？');
+                //alert('不要着急我正在加载~？');
                 toggleLoadingControls(false);
             },
             success: function(data){

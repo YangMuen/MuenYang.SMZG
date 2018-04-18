@@ -88,15 +88,18 @@
 
 
     <text name="SliderAlbumName1" value="教会运作七十问"/>
-    <text name="SliderAlbumName2" value="加拉太书查经：蒙哥 东明 路加"/>
-    <text name="SliderAlbumName3" value="路加福音： 蒙哥 路加"/>
-    <text name="SliderAlbumName4" value="四福音不合编：蒙哥 小卫"/>
-    <text name="SliderAlbumName5" value="圣经音乐会：蒙哥"/>
-    <text name="SliderAlbumName6" value="细说传道书：蒙哥 骆驼"/>
-    <text name="SliderAlbumName7" value="约翰福音：蒙哥 阿桂"/>
-    <text name="SliderAlbumName8" value="阿桂主日信息 这是阿桂在所服事教会的主日信息"/>
-    <text name="SliderAlbumName9" value="仆人之路 给传道的无名人"/>
-    <text name="SliderAlbumName10" value="这是蒙哥与满福教会查经的实录"/>
+    <text name="SliderAlbumName2" value="加拉太书查经"/>
+    <text name="SliderAlbumName3" value="路加福音"/>
+    <text name="SliderAlbumName4" value="四福音不合编"/>
+    <text name="SliderAlbumName5" value="圣经音乐会"/>
+    <text name="SliderAlbumName6" value="细说传道书"/>    
+    <text name="SliderAlbumName7" value="约翰福音"/>
+    <text name="SliderAlbumName8" value="阿桂主日信息"/>
+    <text name="SliderAlbumName8Intro" value="这是阿桂在所服事教会的主日信息"/>
+    <text name="SliderAlbumName9" value="仆人之路"/>
+    <text name="SliderAlbumName9Intro" value="给传道的无名人"/>
+    <text name="SliderAlbumName10" value="圣言小学三二一"/>
+    <text name="SliderAlbumName10Intro" value="这是蒙哥与满福教会查经的实录"/>
 
     <!-- Slider Name -->
     <text name="SliderPic1" value="JiaoHuiYunZuo.jpg"/>
