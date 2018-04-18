@@ -9,7 +9,7 @@
 
     <div class="container mccBorder">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 swty-items-navigat">
                 <h4 class="mccTitle">归档节目</h4>
                 <div class="mcc-current-year">
                     <strong><span>选择节目年份：</span></strong>
@@ -36,7 +36,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="panel-group" id="accordion">
+                <div class="panel-group select-time" id="accordion">
                     <div class="panel panel-default">
                         <div class="panel-heading mccPanelHeading">
                             <h4 class="panel-title">
@@ -47,7 +47,7 @@
                         </div>
                         <div id="collapseyear" class="panel-collapse collapse in">
                             <div class="panel-body">
-                                <div class="row">
+                                <div class="rowtime">
                                     <div class="col-xs-3">
                                         <a id="1" href="javascript:void(0)" class="mccMonth" onclick="getSwtyItemsData('date=2018-01')">201801</a>
                                     </div>
@@ -61,7 +61,7 @@
                                         <a id="4" href="javascript:void(0)" class="mccMonth" onclick="getSwtyItemsData('date=2018-04')">201804</a>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="rowtime">
                                     <div class="col-xs-3">
                                         <a id="5" href="javascript:void(0)" class="mccMonth" onclick="getSwtyItemsData('date=2018-05')">201805</a>
                                     </div>
@@ -75,7 +75,7 @@
                                         <a id="8" href="javascript:void(0)" class="mccMonth" onclick="getSwtyItemsData('date=2018-08')">201808</a>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="rowtime">
                                     <div class="col-xs-3">
                                         <a id="9" href="javascript:void(0)" class="mccMonth" onclick="getSwtyItemsData('date=2018-09')">201809</a>
                                     </div>
@@ -94,15 +94,14 @@
                     </div>
 
                 </div>
-
             </div>
 
-            <div class="col-sm-8">
-                <div class="row">
+            <div class="col-sm-8 swty-items ">
+                <div>
                     <h4 class="mccTitle">节目列表</h4>
                 </div>
 
-                <div class="row" style="padding-left:11px;">
+                <div class="search-form">
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
                             <div class="col-sm-5 col-xs-8">
@@ -113,15 +112,18 @@
                     </form>
                 </div>
 
-                <div class="row">
+                @* 节目Title  begin *@
+                <div class="item-title row">
                     <div class="col-sm-2 col-xs-6"><strong>节目时间</strong></div>
                     <div class="col-sm-1 col-xs-3" style="padding-left:2px;"><strong>收听</strong></div>
                     <div class="col-sm-1 col-xs-3" style="padding-left:2px;"><strong>下载</strong></div>
                     <div class="col-sm-5 col-xs-12 text-center"><strong>内容摘要</strong></div>
+                    <div class="col-sm-3 col-xs-12 text-center"><strong></strong></div>
                 </div>
-                <div class="row"> <hr style="margin-bottom:5px;margin-top:2px;" /></div>
+                <div class="row item-title-hr"> <hr style="margin-bottom:5px;margin-top:2px;" /></div>
+                @* 节目Title  end *@
 
-                @* loading *@
+                @* 加载节目动画 begin *@
                 <div class="spinner">
                     <div class="spinner-container container1">
                         <div class="circle1"></div>
@@ -142,14 +144,11 @@
                         <div class="circle4"></div>
                     </div>
                 </div>
-                @* loading end *@
+                @* 加载节目动画 end *@
 
-
-                <div class="">
-                    <div id="ProgramList" class="mccdiv">
-
-                    </div>
-                </div>
+                @* 节目列表 begin *@
+                <div id="ProgramList" class="mccdiv"></div>
+                @* 节目列表 end *@
 
             </div>
         </div>

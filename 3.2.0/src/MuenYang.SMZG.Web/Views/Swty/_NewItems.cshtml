@@ -12,11 +12,11 @@
     <div id="NewItems" class="container">
         <h1>@L("NewItems")</h1>
         <p class="text-center lead">@L("NewItemsDetail")</p>
-        <div class="row">
+        <div class="row item-title">
             <div class="col-sm-10"><div class="fl"><strong>@L("NewItemsList")</strong></div></div>
             <div class="col-sm-2">
                 <div class="fr">
-                    @Html.ActionLink(L("MoreItems") + ">", "SwtychinaTime", null, new { target = "_blank" })
+                    @Html.ActionLink(L("MoreItems") + ">", "SwtychinaTime", null, new { target = "_blank"})
                 </div>
             </div>
 
@@ -24,7 +24,7 @@
                 <div class="col-sm-1"><strong>收听</strong></div>
                 <div class="col-sm-1"><strong>下载</strong></div>*@
         </div>
-        <div class="row"> <hr style="margin-bottom:5px;margin-top:2px;" /></div>
+        <div class="row item-title-hr"> <hr style="margin-bottom:5px;margin-top:2px;" /></div>
         @foreach (var temp in newItemsList)
         {
             if (nCount > 10) { break; }
@@ -46,22 +46,21 @@
 
                 @if (ViewBag.IsMobileBrowser != null & !ViewBag.IsMobileBrowser)
                 {
-                    <div class="col-sm-5" style="line-height:2.5">@temp.title (@temp.date)</div>
-                    <div class="col-sm-1" onclick="playMe(this);" playurl=@Url id=@nCount @*data-container="body" data-toggle="popover" data-placement="top" data-content=@L("ItemPlay")*@>
+                    <div class="fl item-name" style="line-height:2.5">@temp.title (@temp.date)</div>
+                    <div class="fl" onclick="playMe(this);" playurl=@Url id=@nCount >
                         <a href="javascript:void(0)" class="list_menu__item list_menu__play">
                             <i class="list_menu__icon_play"></i>
                         </a>
                     </div>
-                    <div class="col-sm-1" id="download-div" @*data-container="body" data-toggle="popover" data-placement="top"
-			    data-content=@L("ItemDownload")*@>
-                        <a href="@Url" class="list_menu__item list_menu__down" target="_blank">
+                    <div class="fl" id="download-div">
+                        <a href="@Url" class="list_menu__item list_menu__down" target="_blank" title="请右键另存为下载">
                             <i class="list_menu__icon_down"></i>
                         </a>
                     </div>
                 }
                 else
                 {
-                    <div class="col-sm-5" onclick="playMe(this);" playurl=@Url id=@nCount>@temp.title (@temp.date)</div>
+                    <div class="fl" onclick="playMe(this);" playurl=@Url id=@nCount>@temp.title (@temp.date)</div>
                 }
 
             </div>
