@@ -27,7 +27,7 @@
 
 .mccYear {
     font-size: 17px;
-    color: rgb(0, 0, 255) !important;
+    color: rgb(0, 127, 255) !important;
     font-weight: 700;
 }
 
@@ -395,3 +395,57 @@
 .album-items-intro {
     padding: 15px 32px 5px 32px
 }
+#itemsNavigationYear {
+    text-decoration: none;
+}
+.main {
+    padding-top: 20px;
+}
+.album-list {
+    padding: 12px 20px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.album-list h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 12px 0;
+    border-bottom: 1px solid #eaeaea;
+    line-height: 26px;
+}
+
+.design {
+    overflow: hidden;
+}
+.navto-nav {
+    cursor: pointer;
+    margin: 8px 2px;
+    padding: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #eaeaea;
+}
+.album-item {
+    padding: 6px 8px;
+    background-color: #bbb;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+
+/*commen begin*/
+.padding-left-0{
+    padding-left:0;
+}
+.padding-right-0 {
+    padding-right: 0;
+}
+.padding-top-0 {
+    padding-top: 0;
+}
+.padding-bottom-0 {
+    padding-bottom: 0;
+}
+/*commen end*/

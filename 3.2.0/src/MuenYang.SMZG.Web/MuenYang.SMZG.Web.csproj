@@ -2813,6 +2813,10 @@
     <Content Include="App_Data\JiaoHuiYunZuo.json" />
     <Content Include="App_Data\JiaLaTaiShu.json" />
     <Content Include="App_Data\LuJiaFuYin.json" />
+    <Content Include="App_Data\SiFuYinBuHeBian.json" />
+    <Content Include="App_Data\Agui.json" />
+    <Content Include="App_Data\PuRenZhiLu.json" />
+    <Content Include="App_Data\ShengYangXiaoXue321.json" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
