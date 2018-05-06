@@ -1,9 +1,9 @@
 ﻿{
-  "Name": "2017年1月节目",
-  "Introduce": "这是2017年1月份的节目，测试使用",
-  "Compere": "刘三川",
+  "Name": "阿桂的主日信息",
+  "Introduce": "这是阿桂在所服事会关于复兴的系列信息。",
+  "Compere": "阿桂",
   "UpdateStatus": "更新中",
-  "Picture": null,
+  "Picture": "Agui.jpg",
   "ItemList": [
     {
       "date": "2017-01-02",
